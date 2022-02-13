@@ -1,4 +1,4 @@
-package com.jojoldu.book_real;
+package com.jojoldu.book_real.springboot;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
