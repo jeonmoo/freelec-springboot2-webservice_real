@@ -1,4 +1,4 @@
-package com.jojoldu.book_real.web;
+package com.jojoldu.book_real.springboot.web;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

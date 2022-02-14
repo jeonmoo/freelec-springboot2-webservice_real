@@ -1,4 +1,4 @@
-package com.jojoldu.book_real.web.dto;
+package com.jojoldu.book_real.springboot.web.dto;
 
 import com.jojoldu.book_real.springboot.web.dto.HelloResponseDto;
 import org.assertj.core.api.Assertions;
