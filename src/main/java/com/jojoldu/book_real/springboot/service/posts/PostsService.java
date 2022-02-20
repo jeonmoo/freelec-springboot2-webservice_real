@@ -6,11 +6,9 @@ import com.jojoldu.book_real.springboot.web.dto.PostsResponseDto;
 import com.jojoldu.book_real.springboot.web.dto.PostsSaveRequestDto;
 import com.jojoldu.book_real.springboot.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
-import net.bytebuddy.asm.Advice;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-//import javax.transaction.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 
