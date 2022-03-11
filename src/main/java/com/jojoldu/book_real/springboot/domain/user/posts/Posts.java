@@ -1,4 +1,4 @@
-package com.jojoldu.book_real.springboot.domain.posts;
+package com.jojoldu.book_real.springboot.domain.user.posts;
 
 
 import com.jojoldu.book_real.springboot.domain.BaseTimeEntity;

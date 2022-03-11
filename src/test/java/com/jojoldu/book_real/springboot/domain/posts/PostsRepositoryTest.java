@@ -1,7 +1,7 @@
 package com.jojoldu.book_real.springboot.domain.posts;
 
-import com.jojoldu.book_real.springboot.domain.posts.Posts;
-import com.jojoldu.book_real.springboot.domain.posts.PostsRepository;
+import com.jojoldu.book_real.springboot.domain.user.posts.Posts;
+import com.jojoldu.book_real.springboot.domain.user.posts.PostsRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;

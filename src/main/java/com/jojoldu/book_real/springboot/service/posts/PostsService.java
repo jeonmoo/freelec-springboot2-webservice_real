@@ -1,6 +1,6 @@
 package com.jojoldu.book_real.springboot.service.posts;
-import com.jojoldu.book_real.springboot.domain.posts.Posts;
-import com.jojoldu.book_real.springboot.domain.posts.PostsRepository;
+import com.jojoldu.book_real.springboot.domain.user.posts.Posts;
+import com.jojoldu.book_real.springboot.domain.user.posts.PostsRepository;
 import com.jojoldu.book_real.springboot.web.dto.PostsListResponseDto;
 import com.jojoldu.book_real.springboot.web.dto.PostsResponseDto;
 import com.jojoldu.book_real.springboot.web.dto.PostsSaveRequestDto;

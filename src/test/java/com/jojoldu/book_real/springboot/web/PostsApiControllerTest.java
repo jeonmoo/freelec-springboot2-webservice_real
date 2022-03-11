@@ -1,9 +1,12 @@
-//package com.jojoldu.book_real.web;
+//package com.jojoldu.book_real.springboot.web;
 //
 //import com.jojoldu.book_real.springboot.domain.posts.Posts;
 //import com.jojoldu.book_real.springboot.domain.posts.PostsRepository;
+//import com.jojoldu.book_real.springboot.domain.user.posts.Posts;
+//import com.jojoldu.book_real.springboot.domain.user.posts.PostsRepository;
 //import com.jojoldu.book_real.springboot.web.dto.PostsSaveRequestDto;
 //import com.jojoldu.book_real.springboot.web.dto.PostsUpdateRequestDto;
+//import org.aspectj.lang.annotation.Before;
 //import org.assertj.core.api.Assertions;
 //import org.junit.jupiter.api.AfterEach;
 //import org.junit.jupiter.api.Test;
@@ -12,11 +15,13 @@
 //import org.springframework.boot.test.context.SpringBootTest;
 //import org.springframework.boot.test.web.client.TestRestTemplate;
 //import org.springframework.boot.web.server.LocalServerPort;
-//import org.springframework.http.HttpEntity;
-//import org.springframework.http.HttpMethod;
-//import org.springframework.http.HttpStatus;
-//import org.springframework.http.ResponseEntity;
+//import org.springframework.http.*;
+//import org.springframework.security.test.context.support.WithMockUser;
 //import org.springframework.test.context.junit.jupiter.SpringExtension;
+//import org.springframework.test.web.servlet.MockMvc;
+//import org.springframework.test.web.servlet.MockMvcBuilder;
+//import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+//import org.springframework.web.context.WebApplicationContext;
 //
 //import java.util.List;
 //
@@ -32,7 +37,19 @@
 //
 //    @Autowired
 //    private PostsRepository postsRepository;
-//    asdfdasfas
+//
+//    @Autowired
+//    private WebApplicationContext context;
+//
+//    private MockMvc mvc;
+//
+//    @Before
+//    public void setup() {
+//        mvc = MockMvcBuilders
+//                .webAppContextSetup(context)
+//                .apply(springSecurity())
+//                .build();
+//    }
 //
 //    @AfterEach
 //    public void tearDown() throws Exception {
@@ -40,6 +57,7 @@
 //    }
 //
 //    @Test
+//    @WithMockUser(roles = "USER")
 //    public void Posts_등록된다() throws Exception {
 //        String title = "title";
 //        String content = "content";
@@ -64,6 +82,7 @@
 //    }
 //
 //    @Test
+//    @WithMockUser(roles = "USER")
 //    public void Posts_수정된다() throws Exception {
 //        //given
 //        Posts savedPosts = postsRepository.save(Posts.builder()
