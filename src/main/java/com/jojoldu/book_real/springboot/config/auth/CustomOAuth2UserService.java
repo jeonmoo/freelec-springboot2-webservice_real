@@ -1,5 +1,7 @@
 package com.jojoldu.book_real.springboot.config.auth;
 
+import com.jojoldu.book_real.springboot.config.auth.dto.OAuthAttributes;
+import com.jojoldu.book_real.springboot.config.auth.dto.SessionUser;
 import com.jojoldu.book_real.springboot.domain.user.User;
 import com.jojoldu.book_real.springboot.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -38,15 +40,15 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
         User user = saveOrUpdate(attributes);
         httpSession.setAttribute("user", new SessionUser(user));
 
-        return new DefaultOAuth2User(Collections.singleton(new SimpleGrantedAuthority(user, getRoleKey())),
+        return new DefaultOAuth2User(Collections.singleton(new SimpleGrantedAuthority(user.getRoleKey())),
                 attributes.getAttributes(),
-                attributes.getNameAttributes.toEntity());
+                attributes.getNameAttributeKey());
     }
 
-    private User saeOrUpdate(OAuthAttributes attributes) {
+    private User saveOrUpdate(OAuthAttributes attributes) {
         User user = userRepository.findByEmail(attributes.getEmail())
                 .map(entity -> entity.update(attributes.getName(), attributes.getPicture()))
-                .orElse(attribytes.toEntity());
+                .orElse(attributes.toEntity());
 
         return userRepository.save(user);
     }
